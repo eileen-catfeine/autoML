@@ -1,0 +1,17 @@
+name,model_type,metric_type,metric_value,train_time
+1_DecisionTree,Decision Tree,logloss,0.6281803043768117,1.33
+2_DecisionTree,Decision Tree,logloss,0.9970188000583055,0.84
+3_DecisionTree,Decision Tree,logloss,1.061726519830505,0.62
+4_Linear,Linear,logloss,0.5739757890711534,1.32
+4_Linear_KMeansFeatures,Linear,logloss,0.5593967340856998,1.43
+1_DecisionTree_KMeansFeatures,Decision Tree,logloss,0.6281803043768117,1.28
+2_DecisionTree_KMeansFeatures,Decision Tree,logloss,1.062605685995197,0.85
+4_Linear_KMeansFeatures_RandomFeature,Linear,logloss,0.5596700035248109,2.49
+5_DecisionTree,Decision Tree,logloss,0.7243942008177722,0.83
+6_DecisionTree,Decision Tree,logloss,0.7243942008177722,0.99
+7_DecisionTree,Decision Tree,logloss,1.1162748275140657,0.53
+8_DecisionTree,Decision Tree,logloss,0.5298293792991892,0.93
+9_DecisionTree,Decision Tree,logloss,0.5298293792991892,1.11
+10_DecisionTree,Decision Tree,logloss,0.5233323910210599,0.9
+10_DecisionTree_BoostOnErrors,Decision Tree,logloss,0.537525882204146,0.89
+Ensemble,Ensemble,logloss,0.5224185807476678,1.47

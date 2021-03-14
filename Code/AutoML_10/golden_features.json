@@ -1,0 +1,6 @@
+{
+    "new_features": [],
+    "new_columns": [],
+    "ml_task": "binary_classification",
+    "error": "Golden Features not created. Empty scores. Input data shape: (182, 1), (182,)"
+}

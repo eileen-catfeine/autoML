@@ -1,0 +1,10 @@
+feature,mean_importance
+breast-quad,-0.003082965354795153
+menopause,0.0
+tumor-size,0.0
+node-caps,0.0
+deg-malig,0.0
+irradiat,0.0
+breast,0.008950469588136412
+age,0.014896943502072801
+inv-nodes,0.03364124981594008

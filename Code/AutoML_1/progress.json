@@ -1,0 +1,300 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "not_so_random",
+            "golden_features",
+            "insert_random_feature",
+            "features_selection",
+            "hill_climbing_1",
+            "hill_climbing_2",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Linear",
+            "Random Forest",
+            "LightGBM",
+            "Xgboost",
+            "CatBoost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.04824185371398926
+            },
+            {
+                "model_name": "1_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 8.411986827850342
+            },
+            {
+                "model_name": "1_Linear_RandomFeature",
+                "model_type": "Linear",
+                "fit_level": "insert_random_feature",
+                "train_time": 2.1120362281799316
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.4178009033203125
+            }
+        ],
+        "is_hill_climbing": true,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "age": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "menopause": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "tumor-size": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "inv-nodes": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "node-caps": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "deg-malig": [
+                            "scale_normal"
+                        ],
+                        "breast": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "breast-quad": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "irradiat": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 5,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1/X.parquet",
+                    "y_path": "AutoML_1/y.parquet",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 1
+                },
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_Linear",
+                "status": "trained",
+                "final_loss": 0.5739757890711534,
+                "train_time": 8.411986827850342,
+                "max_time_for_learner": 72.0
+            }
+        ],
+        "golden_features": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "age": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "menopause": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "tumor-size": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "inv-nodes": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "node-caps": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "deg-malig": [
+                            "scale_normal"
+                        ],
+                        "breast": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "breast-quad": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "irradiat": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "AutoML_1",
+                        "ml_task": "binary_classification"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 5,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1/X.parquet",
+                    "y_path": "AutoML_1/y.parquet",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 1
+                },
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_Linear_GoldenFeatures",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "max_time_for_learner": 72.0
+            }
+        ],
+        "insert_random_feature": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "age": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "menopause": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "tumor-size": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "inv-nodes": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "node-caps": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "deg-malig": [
+                            "scale_normal"
+                        ],
+                        "breast": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "breast-quad": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "irradiat": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification",
+                    "add_random_feature": true
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 5,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1/X.parquet",
+                    "y_path": "AutoML_1/y.parquet",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 1
+                },
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_Linear_RandomFeature",
+                "status": "trained",
+                "final_loss": 0.5682428400192148,
+                "train_time": 2.1120362281799316,
+                "max_time_for_learner": 72.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.5739757890711534,
+                "train_time": 0.4178009033203125
+            }
+        ]
+    },
+    "adjust_validation": false
+}

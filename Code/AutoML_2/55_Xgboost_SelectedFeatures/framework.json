@@ -1,0 +1,816 @@
+{
+    "uid": "5b73eac9-31b9-4bd6-9b02-5c69c26a3181",
+    "name": "55_Xgboost_SelectedFeatures",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "age": {
+                            "30-39": 0,
+                            "40-49": 1,
+                            "50-59": 2,
+                            "60-69": 3,
+                            "70-79": 4
+                        },
+                        "menopause": {
+                            "ge40": 0,
+                            "lt40": 1,
+                            "premeno": 2
+                        },
+                        "tumor-size": {
+                            "0-4": 0,
+                            "10-14": 1,
+                            "15-19": 2,
+                            "20-24": 3,
+                            "25-29": 4,
+                            "30-34": 5,
+                            "35-39": 6,
+                            "40-44": 7,
+                            "45-49": 8,
+                            "5-9": 9,
+                            "50-54": 10
+                        },
+                        "inv-nodes": {
+                            "0-2": 0,
+                            "12-14": 1,
+                            "3-5": 2,
+                            "6-8": 3,
+                            "9-11": 4
+                        },
+                        "node-caps": {
+                            "?": 0,
+                            "no": 1,
+                            "yes": 2
+                        },
+                        "breast": {
+                            "left": 0,
+                            "right": 1
+                        },
+                        "breast-quad": {
+                            "?": 0,
+                            "central": 1,
+                            "left_low": 2,
+                            "left_up": 3,
+                            "right_low": 4,
+                            "right_up": 5
+                        },
+                        "irradiat": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "age",
+                        "menopause",
+                        "tumor-size",
+                        "inv-nodes",
+                        "node-caps",
+                        "breast",
+                        "breast-quad",
+                        "irradiat"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "B": 0,
+                "M": 1
+            },
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "breast-quad"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "categorical_to_int"
+                    ],
+                    "menopause": [
+                        "categorical_to_int"
+                    ],
+                    "tumor-size": [
+                        "categorical_to_int"
+                    ],
+                    "inv-nodes": [
+                        "categorical_to_int"
+                    ],
+                    "node-caps": [
+                        "categorical_to_int"
+                    ],
+                    "breast": [
+                        "categorical_to_int"
+                    ],
+                    "breast-quad": [
+                        "categorical_to_int"
+                    ],
+                    "irradiat": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "irradiat",
+                    "breast",
+                    "random_feature",
+                    "breast-quad"
+                ]
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "age": {
+                            "30-39": 0,
+                            "40-49": 1,
+                            "50-59": 2,
+                            "60-69": 3,
+                            "70-79": 4
+                        },
+                        "menopause": {
+                            "ge40": 0,
+                            "lt40": 1,
+                            "premeno": 2
+                        },
+                        "tumor-size": {
+                            "0-4": 0,
+                            "10-14": 1,
+                            "15-19": 2,
+                            "20-24": 3,
+                            "25-29": 4,
+                            "30-34": 5,
+                            "35-39": 6,
+                            "40-44": 7,
+                            "45-49": 8,
+                            "5-9": 9,
+                            "50-54": 10
+                        },
+                        "inv-nodes": {
+                            "0-2": 0,
+                            "12-14": 1,
+                            "15-17": 2,
+                            "3-5": 3,
+                            "6-8": 4,
+                            "9-11": 5
+                        },
+                        "node-caps": {
+                            "?": 0,
+                            "no": 1,
+                            "yes": 2
+                        },
+                        "breast": {
+                            "left": 0,
+                            "right": 1
+                        },
+                        "breast-quad": {
+                            "central": 0,
+                            "left_low": 1,
+                            "left_up": 2,
+                            "right_low": 3,
+                            "right_up": 4
+                        },
+                        "irradiat": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "age",
+                        "menopause",
+                        "tumor-size",
+                        "inv-nodes",
+                        "node-caps",
+                        "breast",
+                        "breast-quad",
+                        "irradiat"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "B": 0,
+                "M": 1
+            },
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "breast-quad"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "categorical_to_int"
+                    ],
+                    "menopause": [
+                        "categorical_to_int"
+                    ],
+                    "tumor-size": [
+                        "categorical_to_int"
+                    ],
+                    "inv-nodes": [
+                        "categorical_to_int"
+                    ],
+                    "node-caps": [
+                        "categorical_to_int"
+                    ],
+                    "breast": [
+                        "categorical_to_int"
+                    ],
+                    "breast-quad": [
+                        "categorical_to_int"
+                    ],
+                    "irradiat": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "irradiat",
+                    "breast",
+                    "random_feature",
+                    "breast-quad"
+                ]
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "age": {
+                            "30-39": 0,
+                            "40-49": 1,
+                            "50-59": 2,
+                            "60-69": 3,
+                            "70-79": 4
+                        },
+                        "menopause": {
+                            "ge40": 0,
+                            "lt40": 1,
+                            "premeno": 2
+                        },
+                        "tumor-size": {
+                            "0-4": 0,
+                            "10-14": 1,
+                            "15-19": 2,
+                            "20-24": 3,
+                            "25-29": 4,
+                            "30-34": 5,
+                            "35-39": 6,
+                            "40-44": 7,
+                            "45-49": 8,
+                            "5-9": 9,
+                            "50-54": 10
+                        },
+                        "inv-nodes": {
+                            "0-2": 0,
+                            "12-14": 1,
+                            "15-17": 2,
+                            "3-5": 3,
+                            "6-8": 4,
+                            "9-11": 5
+                        },
+                        "node-caps": {
+                            "?": 0,
+                            "no": 1,
+                            "yes": 2
+                        },
+                        "breast": {
+                            "left": 0,
+                            "right": 1
+                        },
+                        "breast-quad": {
+                            "?": 0,
+                            "central": 1,
+                            "left_low": 2,
+                            "left_up": 3,
+                            "right_low": 4,
+                            "right_up": 5
+                        },
+                        "irradiat": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "age",
+                        "menopause",
+                        "tumor-size",
+                        "inv-nodes",
+                        "node-caps",
+                        "breast",
+                        "breast-quad",
+                        "irradiat"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "B": 0,
+                "M": 1
+            },
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "breast-quad"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "categorical_to_int"
+                    ],
+                    "menopause": [
+                        "categorical_to_int"
+                    ],
+                    "tumor-size": [
+                        "categorical_to_int"
+                    ],
+                    "inv-nodes": [
+                        "categorical_to_int"
+                    ],
+                    "node-caps": [
+                        "categorical_to_int"
+                    ],
+                    "breast": [
+                        "categorical_to_int"
+                    ],
+                    "breast-quad": [
+                        "categorical_to_int"
+                    ],
+                    "irradiat": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "irradiat",
+                    "breast",
+                    "random_feature",
+                    "breast-quad"
+                ]
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "age": {
+                            "30-39": 0,
+                            "40-49": 1,
+                            "50-59": 2,
+                            "60-69": 3,
+                            "70-79": 4
+                        },
+                        "menopause": {
+                            "ge40": 0,
+                            "lt40": 1,
+                            "premeno": 2
+                        },
+                        "tumor-size": {
+                            "0-4": 0,
+                            "10-14": 1,
+                            "15-19": 2,
+                            "20-24": 3,
+                            "25-29": 4,
+                            "30-34": 5,
+                            "35-39": 6,
+                            "40-44": 7,
+                            "45-49": 8,
+                            "5-9": 9,
+                            "50-54": 10
+                        },
+                        "inv-nodes": {
+                            "0-2": 0,
+                            "12-14": 1,
+                            "15-17": 2,
+                            "3-5": 3,
+                            "6-8": 4,
+                            "9-11": 5
+                        },
+                        "node-caps": {
+                            "?": 0,
+                            "no": 1,
+                            "yes": 2
+                        },
+                        "breast": {
+                            "left": 0,
+                            "right": 1
+                        },
+                        "breast-quad": {
+                            "?": 0,
+                            "central": 1,
+                            "left_low": 2,
+                            "left_up": 3,
+                            "right_low": 4,
+                            "right_up": 5
+                        },
+                        "irradiat": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "age",
+                        "menopause",
+                        "tumor-size",
+                        "inv-nodes",
+                        "node-caps",
+                        "breast",
+                        "breast-quad",
+                        "irradiat"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "B": 0,
+                "M": 1
+            },
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "breast-quad"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "categorical_to_int"
+                    ],
+                    "menopause": [
+                        "categorical_to_int"
+                    ],
+                    "tumor-size": [
+                        "categorical_to_int"
+                    ],
+                    "inv-nodes": [
+                        "categorical_to_int"
+                    ],
+                    "node-caps": [
+                        "categorical_to_int"
+                    ],
+                    "breast": [
+                        "categorical_to_int"
+                    ],
+                    "breast-quad": [
+                        "categorical_to_int"
+                    ],
+                    "irradiat": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "irradiat",
+                    "breast",
+                    "random_feature",
+                    "breast-quad"
+                ]
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "age": {
+                            "30-39": 0,
+                            "40-49": 1,
+                            "50-59": 2,
+                            "60-69": 3,
+                            "70-79": 4
+                        },
+                        "menopause": {
+                            "ge40": 0,
+                            "lt40": 1,
+                            "premeno": 2
+                        },
+                        "tumor-size": {
+                            "0-4": 0,
+                            "10-14": 1,
+                            "15-19": 2,
+                            "20-24": 3,
+                            "25-29": 4,
+                            "30-34": 5,
+                            "35-39": 6,
+                            "40-44": 7,
+                            "45-49": 8,
+                            "5-9": 9,
+                            "50-54": 10
+                        },
+                        "inv-nodes": {
+                            "0-2": 0,
+                            "12-14": 1,
+                            "15-17": 2,
+                            "3-5": 3,
+                            "6-8": 4,
+                            "9-11": 5
+                        },
+                        "node-caps": {
+                            "?": 0,
+                            "no": 1,
+                            "yes": 2
+                        },
+                        "breast": {
+                            "left": 0,
+                            "right": 1
+                        },
+                        "breast-quad": {
+                            "?": 0,
+                            "central": 1,
+                            "left_low": 2,
+                            "left_up": 3,
+                            "right_low": 4,
+                            "right_up": 5
+                        },
+                        "irradiat": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "age",
+                        "menopause",
+                        "tumor-size",
+                        "inv-nodes",
+                        "node-caps",
+                        "breast",
+                        "breast-quad",
+                        "irradiat"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "B": 0,
+                "M": 1
+            },
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "breast-quad"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "categorical_to_int"
+                    ],
+                    "menopause": [
+                        "categorical_to_int"
+                    ],
+                    "tumor-size": [
+                        "categorical_to_int"
+                    ],
+                    "inv-nodes": [
+                        "categorical_to_int"
+                    ],
+                    "node-caps": [
+                        "categorical_to_int"
+                    ],
+                    "breast": [
+                        "categorical_to_int"
+                    ],
+                    "breast-quad": [
+                        "categorical_to_int"
+                    ],
+                    "irradiat": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "irradiat",
+                    "breast",
+                    "random_feature",
+                    "breast-quad"
+                ]
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.3.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "d93c8bf0-4059-485e-b00d-9f7fad54dd51",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eval_metric": "logloss",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0",
+            "best_ntree_limit": 39
+        },
+        {
+            "library_version": "1.3.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "2e468306-ab6b-458b-b542-0e1068150a01",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eval_metric": "logloss",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "explain_level": 1
+            },
+            "name": "learner_fold_1",
+            "best_ntree_limit": 75
+        },
+        {
+            "library_version": "1.3.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "226ad95f-5160-49ce-9f9f-5a8c0ff25c20",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eval_metric": "logloss",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "explain_level": 1
+            },
+            "name": "learner_fold_2",
+            "best_ntree_limit": 36
+        },
+        {
+            "library_version": "1.3.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "2b11cedb-70c8-4760-9aff-0851d5dc8f76",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eval_metric": "logloss",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "explain_level": 1
+            },
+            "name": "learner_fold_3",
+            "best_ntree_limit": 51
+        },
+        {
+            "library_version": "1.3.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "1d6e6d8c-aeb1-48ae-9438-4666980cc289",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eval_metric": "logloss",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "explain_level": 1
+            },
+            "name": "learner_fold_4",
+            "best_ntree_limit": 27
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "age": [
+                    "categorical_to_int"
+                ],
+                "menopause": [
+                    "categorical_to_int"
+                ],
+                "tumor-size": [
+                    "categorical_to_int"
+                ],
+                "inv-nodes": [
+                    "categorical_to_int"
+                ],
+                "node-caps": [
+                    "categorical_to_int"
+                ],
+                "breast": [
+                    "categorical_to_int"
+                ],
+                "breast-quad": [
+                    "categorical_to_int"
+                ],
+                "irradiat": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "irradiat",
+                "breast",
+                "random_feature",
+                "breast-quad"
+            ]
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_2/X.parquet",
+            "y_path": "AutoML_2/y.parquet",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "objective": "binary:logistic",
+            "eval_metric": "logloss",
+            "eta": 0.075,
+            "max_depth": 8,
+            "min_child_weight": 5,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "explain_level": 1
+        },
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "55_Xgboost_SelectedFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "55_Xgboost_SelectedFeatures/learner_fold_0.xgboost",
+        "55_Xgboost_SelectedFeatures/learner_fold_1.xgboost",
+        "55_Xgboost_SelectedFeatures/learner_fold_2.xgboost",
+        "55_Xgboost_SelectedFeatures/learner_fold_3.xgboost",
+        "55_Xgboost_SelectedFeatures/learner_fold_4.xgboost"
+    ],
+    "predictions_fname": "55_Xgboost_SelectedFeatures/predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.5448643177617014,
+    "train_time": 2.5946712493896484,
+    "is_stacked": false,
+    "threshold": 0.5258626341819763
+}

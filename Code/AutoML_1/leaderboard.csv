@@ -1,0 +1,4 @@
+name,model_type,metric_type,metric_value,train_time,single_prediction_time
+1_Linear,Linear,logloss,0.5739757890711534,8.41,0.0959
+1_Linear_RandomFeature,Linear,logloss,0.5682428400192148,2.11,0.1008
+Ensemble,Ensemble,logloss,0.5739757890711534,0.42,0.2099

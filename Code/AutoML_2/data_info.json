@@ -1,0 +1,59 @@
+{
+    "columns": [
+        "age",
+        "menopause",
+        "tumor-size",
+        "inv-nodes",
+        "node-caps",
+        "deg-malig",
+        "breast",
+        "breast-quad",
+        "irradiat"
+    ],
+    "rows": 228,
+    "cols": 9,
+    "target_is_numeric": false,
+    "columns_info": {
+        "age": [
+            "categorical",
+            "few_categories"
+        ],
+        "menopause": [
+            "categorical",
+            "few_categories"
+        ],
+        "tumor-size": [
+            "categorical",
+            "few_categories"
+        ],
+        "inv-nodes": [
+            "categorical",
+            "few_categories"
+        ],
+        "node-caps": [
+            "categorical",
+            "few_categories"
+        ],
+        "deg-malig": [
+            "scale"
+        ],
+        "breast": [
+            "categorical",
+            "few_categories"
+        ],
+        "breast-quad": [
+            "categorical",
+            "few_categories"
+        ],
+        "irradiat": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 9,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

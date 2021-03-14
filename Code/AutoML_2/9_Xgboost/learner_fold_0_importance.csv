@@ -1,0 +1,10 @@
+feature,mean_importance
+age,0.0
+menopause,0.0
+tumor-size,0.0
+inv-nodes,0.0
+node-caps,0.0
+deg-malig,0.0
+breast,0.0
+breast-quad,0.0
+irradiat,0.0
